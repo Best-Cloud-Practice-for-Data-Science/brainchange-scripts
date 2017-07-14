@@ -1,0 +1,21 @@
+#!/bin/bash
+echo 'root:password' | sudo chpasswd;
+sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - ;
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list' ;
+sudo apt-get update ;
+sudo apt-get -y install lxde ubuntu-gnome-desktop tightvncserver xrdp flashplugin-installer chromium-browser firefox google-chrome-stable;
+sudo echo lxsession -s LXDE -e LXDE > ~/.xsession; 
+sudo echo "CHROMIUM_FLAGS=\" --user-data-dir --no-sandbox\"" > sudo /etc/chromium-browser/default; 
+sudo echo "chromium-browser --no-sandbox http://google.com&" >> ~/a;  
+sudo echo "google-chrome --no-sandbox http://google.com&" >> ~/c  ;
+sudo echo "firefox --no-sandbox http://google.com&" >> ~/d;   
+chmod +x ~/a ~/c ~/d;
+sudo cp ~/a /root;
+sudo cp ~/c /root;
+sudo cp ~/d /root;
+sudo touch /etc/xdg/autostart/google-chrome-auto-stop-all-running-instances.desktop /etc/xdg/autostart/google-chrome-autostart.desktop /etc/xdg/autostart/terminal-autostart.desktop ;
+sudo chmod 777 /etc/xdg/autostart/google-chrome-auto-stop-all-running-instances.desktop /etc/xdg/autostart/google-chrome-autostart.desktop /etc/xdg/autostart/terminal-autostart.desktop;
+sudo echo -e "[Desktop Entry]\nType=Application\nName=Google Chrome kill\nGenericName=Google chrome autostop configuration\nComment=This will kill all the running google chrome processes when gnome starts up\nExec=pkill --oldest chrome\nTerminal=true\nType=Application\nX-GNOME-Autostart-enabled=true" | cat > /etc/xdg/autostart/google-chrome-auto-stop-all-running-instances.desktop;
+sudo echo -e "[Desktop Entry]\nType=Application\nName=Google Chrome\nGenericName=Google chrome autostart configuration\nComment=This will open google chrome when gnome starts up\nExec=sudo sensible-browser --no-sandbox\nTerminal=true\nType=Application\nX-GNOME-Autostart-enabled=true" | cat > /etc/xdg/autostart/google-chrome-autostart.desktop;
+sudo echo -e "[Desktop Entry]\nType=Application\nName=Terminal\nGenericName=Terminal autostart configuration\nComment=This will open default terminal program when gnome starts up\nExec=x-terminal-emulator\nTerminal=true\nType=Application\nX-GNOME-Autostart-enabled=true" | cat > /etc/xdg/autostart/terminal-autostart.desktop;
+echo sudo /etc/init.d/xrdp restart;
