@@ -1,0 +1,14 @@
+The script does the following:
+1. Resets the password to an easy one (The password for root becomes password)
+2. Enables the remote desktop from Windows
+3. Installs Chromium, Chrome, Firefox , Flash-Plugin lxde, ubuntu-gnome-desktop, tightvncserver and xrdp 
+4. When windows connect to Unix using mstsc, xrdp environment opens with a terminal along with chrome.
+
+Google Chrome and all other browsers will open, if the --no-sandbox option is given along with the respective browser command. 
+It is needed for the root user. E.g. google-chrome --no-sandbox. 
+A Terminal is also shown along with chrome whenever mstsc runs.
+
+In addtion to all these,
+Chrome opens with gmail.com tab
+The port feature is modified so that the user doesn't need to remember the port number. (Single port is used here-5910)
+Prints VMs OS, IP, IP Location
