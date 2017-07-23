@@ -43,36 +43,32 @@ sudo dpkg --configure -a
 
 #Installing required software packages
 echo -e "\nSTEP-5: Installing required software packages"
-echo "INSTALLING : jq"
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : jq"
 sudo apt-get -y install jq 
-echo "INSTALLING : LIBAPPINDICATOR1"
-sudo apt-get -y install libappindicator1 
-echo "INSTALLING : LIBINDICATOR7"
-sudo apt-get -y install libindicator7 
-echo "INSTALLING : LXDE"
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : LXDE"
 sudo apt-get -y install lxde 
-echo "INSTALLING : UBUNTU"
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : UGD"
 sudo apt-get -y install ubuntu-gnome-desktop 
-echo "INSTALLING : TIGHT_VNC_SERVER"
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : TIGHT_VNC_SERVER"
 sudo apt-get -y install tightvncserver 
-echo "INSTALLING : XRDP"
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : XRDP"
 sudo apt-get -y install xrdp
-echo "INSTALLING : FLASH"
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : LIBAPPINDI"
+sudo apt-get -y install libappindicator1 
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : LIBINDI"
+sudo apt-get -y install libindicator7 
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : FLASH"
 sudo apt-get -y install flashplugin-installer 
-echo "INSTALLING : CHROMIUM BROWSER"
-sudo apt-get -y install chromium-browser 
-echo "INSTALLING : FIREFOX BROWSER"
-sudo apt-get -y install firefox 
-echo "INSTALLING : GOOGLE_CHROME_STABLE"
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : FIREFOX and CHROMIUM BROWSER"
+sudo apt-get -y install firefox chromium-browser 
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : GOOGLE_CHROME_STABLE"
 sudo apt-get -y install google-chrome-stable 
-echo "INSTALLING : FORCEFULLY"
+echo "INSTALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLING : FORCE"
 sudo apt-get install -f
 
 #Configuring lxde
 echo -e "\nSTEP-6: Configuring lxde"
 sudo echo lxsession -s LXDE -e LXDE > ~/.xsession 
-
-sudo ~/.xsession /root/.xsession
 
 #Configuring various browsers settings
 echo -e "\nSTEP-6: Configuring various browsers settings"
@@ -151,3 +147,5 @@ echo -e "\tIP-Country : $country"
 echo -e "===================================================="
 echo -e "\tIP-Postal : $postal_code"
 echo -e "===================================================="
+
+sudo cat /root/rdp-session-setup.sh
