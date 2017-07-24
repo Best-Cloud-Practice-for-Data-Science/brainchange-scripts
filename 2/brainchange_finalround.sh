@@ -3,8 +3,6 @@
 #Author : Jishnu P
 #Date : 17-07-2017
 
-#Getting Universal IP as a command line argument
-
 echo -e "\nNOTE: THIS SCRIPT IS FOR UBUNTU POWERED SYSTEMS. \n\nSTEP-1: SCANNING OPERATING SYSTEM."
 
 # To find whether the OS is ubuntu or not. If the OS is not Ubuntu then the following command returns nothing else returns 'Ubuntu'
