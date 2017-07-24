@@ -29,6 +29,10 @@ sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo a
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 sudo add-apt-repository ppa:chromium-daily/stable
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 205570b98020c48fbfc55ab6ee6f33a296da2320
 #Getting all the dependencies and updates
 echo -e "\nSTEP-4: Getting all the dependencies and updates"
 
@@ -143,4 +147,8 @@ echo -e "===================================================="
 echo -e "\tIP-Postal : $postal_code"
 echo -e "===================================================="
 
+<<<<<<< HEAD
+#sudo cat /root/rdp-session-setup.sh
+=======
 sudo cat /root/rdp-session-setup.sh
+>>>>>>> 205570b98020c48fbfc55ab6ee6f33a296da2320
