@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Author : Jishnu P
-#Date : 17-07-2016
+#Date : 17-07-2017
 
 #Getting Universal IP as a command line argument
 
