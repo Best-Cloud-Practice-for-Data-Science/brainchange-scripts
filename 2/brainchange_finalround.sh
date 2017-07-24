@@ -29,9 +29,6 @@ sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo a
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 sudo add-apt-repository ppa:chromium-daily/stable
 
-
-#Getting all the dependencies and updates once again after repo addition
-
 #Getting all the dependencies and updates
 echo -e "\nSTEP-4: Getting all the dependencies and updates"
 
